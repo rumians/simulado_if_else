@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //PROBLEMA: Compra na Feira
     //Considere que a pessoa foi até a feira e realizou algumas compras, sendo:
@@ -9,10 +10,31 @@
     //Calcule o custo total dos alimentos e verifique se há dinheiro suficiente para realizar a compra, indicando se sobrará ou faltará dinheiro, e também apresentando qual foi a quantia que sobrou ou faltou para realizar a compra. Apresente também na tela o valor total da compra.
 
     //ENTRADA
-
-
+    let dinheiros = Number(prompt("Quanto de dinheiro voce possui para realizar a compra?").replace(",", ".").trim())
+    let Mamão = Number(prompt("Qual o preço da unidade do mamao?").replace(",", ".").trim())
+    let Melancia = Number(prompt("Qual o preço do kilo da melancia?").replace(",", ".").trim())
+    let Abacate = Number(prompt("Qual o preço da unidade do abacate ?").replace(",", ".").trim())
+    let Cebola = Number(prompt("Qual o preço do kilo da cebola").replace(",", ".").trim())
     //PROCESSAMENTO
+    let a = 5 * Mamão
+    let b = 3 * Melancia
+    let c = 4 * Abacate
+    let d = 1.1 * Cebola
+    let e = a + b + c + d
+    let f = (dinheiros - e)* -1
 
+    if (e > dinheiros) {
+        alert (`Voce nao tem dinherio suficiente.O faltara R$${f}`)
+    }
+    else if (e < dinheiros) {
+        alert (`Voce tem dinheiro sulficiete. Sobrou R$${f} `)
+    }
+    else if (e = dinheiros ) {
+        alert(`voce tem exatamente a quantia`)
+    }
+    else {
+        alert(`Valor invalido!!`)
+    }
 
     //SAÍDA
 
